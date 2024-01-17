@@ -23,6 +23,13 @@ public class Numeric {
         System.out.println(y);
         System.out.println(++x);
 
+        int num1 = 11 + 22 + 33;        // 10진수
+        int num2 = 0123;                // 8진수
+        int num3 = 0x123;               // 16진수
+        System.out.println("num1: " + num1);
+        System.out.println("num2: " + num2);
+        System.out.println("num2: " + num3);
+
         // 실수형
         float pi = 3.14F;                           // -3.4 * 10^38 ~ 3.4 * 10^38
         double morePi = 3.14159265358979323846;     // -1.7 * 10^308 ~ 1.7 * 10^308 자바 실수 기본값
