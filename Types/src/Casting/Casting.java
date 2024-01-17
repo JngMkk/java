@@ -6,6 +6,33 @@ import java.util.List;
 
 public class Casting {
     public static void main(String[] args) {
+        /*
+            자동 형 변환
+                규칙 1. 자료형의 크기가 큰 방향으로 형 변환이 일어남.
+                규칙 2. 자료형의 크기에 상관없이 정수 자료형보다 실수 자료형이 우선.
+
+            byte -> short, char -> int -> long -> float -> double
+        */
+        // 자동 형 변환 int -> long
+        int num1 = 50;
+        long num2 = 3147483647L;
+        System.out.println(num1 + num2);
+
+        // 자동 형 변환 double
+        System.out.println(59L + 34.5);
+
+        // 명시적 형 번환 (큰 자료형에서 작은 자료형으로 형 변환을 진행하는 경우 상위 바이트가 잘려 나가기 때문에 주의해야 함)
+        double pi = 3.1415;
+        int exNum = (int)pi;
+        System.out.println(exNum);
+
+        short sNum1 = 1;
+        short sNum2 = 2;
+        // 컴파일 오류 (덧셈 연산을 위해 sNum1과 sNum2에 저장된 값이 int형으로 변환되어 메모리 공간에 임시 저장되기 때문)
+        // short sNum3 = sNum1 + sNum2;
+        short sNum3 = (short)(sNum1 + sNum2);
+        System.out.println(sNum3);
+
         // 문자열을 정수로 변환
         String num = "123";
         int n = Integer.parseInt(num);
